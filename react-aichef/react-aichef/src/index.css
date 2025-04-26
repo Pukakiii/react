@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  top: 0;
+  background-color: #282c34;
+  padding: 1vh;
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  /* top: 10px; */
+  /* border: #282c34 2px solid; */
+}
+.add-ingredient-form {
+  display: flex;
+  flex: 1;
+  /* border: #282c34 2px solid; */
+  width: 75%;
+}
+.add-ingredient-form > input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /* color: white; */
+  flex: auto;
+}
+.add-ingredient-form > button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  flex: 1 1;
+}
+section {
+  /* border: #282c34 2px solid; */
+  width: 75%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+section > h2 {
+  margin: 10px 0;
+  /* padding: 5px; */
+}
+section > ul {
+  margin: 10px 0;
+  /* padding: 5px; */
+  /* border: #282c34 2px solid; */
+  padding-left: 40px;
+}
+li {
+  margin: 0;
+  /* padding: 5px; */
+  /* border-bottom: #282c34 2px solid; */
+}
+.recipe-container {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  background-color: rgb(135, 165, 75);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 25px;
+  border: #282c34 2px solid;
+  flex: 1 1;
+}
+.recipe-container > div > h4 {
+  font-weight: 500;
+}
+.recipe-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 200;
+}
+.recipe-container > button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  flex: 1 1;
+  /* height: 60px; */
+  width: 100%;
+}
+.recipe-container > div > p {
+  /* border: #282c34 2px solid; */
+  margin: 0%;
+  padding: 5px;
+}
+.recipe-container > div > h4 {
+  /* border: #282c34 2px solid; */
+  margin: 0%;
+  padding: 5px;
+}
+/* Recipe Layout */
+
+.recipe {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* max-width: 700px; */
+  margin: 0 auto;
+  margin-left: 25px;
+  width: 95%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.recipe h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe h2 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+/* Description & Meta Info */
+.recipe-description {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.recipe-meta p {
+  margin: 0.25rem 0;
+}
+
+/* Ingredients & Instructions */
+.recipe-ingredients ul,
+.recipe-instructions ol,
+.recipe-tips ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.recipe-ingredients li,
+.recipe-instructions li,
+.recipe-tips li {
+  margin-bottom: 0.4rem;
+}
+
+/* Notes */
+.recipe-notes p {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Main container for the AI-generated recipe */
+.recipe-ai {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 2rem; /* Adds space inside the box */
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  max-width: 700px; /* Keep it readable */
+  margin: 2rem auto; /* Center it on the page */
+  font-family: "Segoe UI", sans-serif; /* Clean, modern font */
+}
+
+/* Heading */
+.recipe-ai h2 {
+  color: #2c3e50; /* Dark blue/gray text */
+  margin-bottom: 1rem; /* Space below the heading */
+  font-size: 1.8rem; /* Slightly larger text */
+  text-align: center; /* Center the heading */
+}
+
+/* Paragraphs rendered by ReactMarkdown */
+.recipe-ai p {
+  line-height: 1.6; /* Spacing between lines */
+  margin-bottom: 1rem; /* Space between paragraphs */
+  color: #333; /* Soft dark text */
+}
+
+/* Lists (if recipe uses bullet points) */
+.recipe-ai ul {
+  padding-left: 1.5rem; /* Indent bullets from left edge */
+  margin-bottom: 1rem;
+}
+
+.recipe-ai li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Optional: bold/italic formatting */
+.recipe-ai strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.recipe-ai em {
+  font-style: italic;
+  color: #555;
+}
+/* Recipe section */
+.recipe-ai {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Hover effect */
+.recipe-ai:hover {
+  background-color: #00000049; /* Light red background */
+  transform: scale(1.01); /* Slight zoom in */
+}
+
+/* Optional: Heading color change on hover */
+.recipe-ai:hover h2 {
+  color: #ffffff; /* Strong red */
+}
+#cancel {
+  background-color: rgb(192, 30, 30);
+  border-radius: 50%;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+#cancel:hover {
+  background-color: rgb(131, 0, 0);
+  cursor: pointer;
+}
